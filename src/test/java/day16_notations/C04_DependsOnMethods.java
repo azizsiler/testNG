@@ -32,7 +32,7 @@ public class C04_DependsOnMethods  {
     @Test
     public void test01(){
         // amazon anasayfaya gidelim
-        driver.get("https://www.ramazon1.com");
+        driver.get("https://www.amazon.com");
     }
     @Test (dependsOnMethods ="test01" , priority = 0)
     public void test02(){
