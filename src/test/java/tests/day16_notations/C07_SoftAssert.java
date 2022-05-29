@@ -1,4 +1,4 @@
-package day16_notations;
+package tests.day16_notations;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
