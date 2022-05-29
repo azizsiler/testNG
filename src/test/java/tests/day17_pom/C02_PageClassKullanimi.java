@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pages.AmazonPage;
 import utilities.Driver;
 
-public class PageClassKullanimi {
+public class C02_PageClassKullanimi {
     //amazona gidelim nutella aratalım
     // sonuc yazısının nutella icerdiğini test edelim
 
