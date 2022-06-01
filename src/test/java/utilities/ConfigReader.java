@@ -15,7 +15,6 @@ public class ConfigReader {
             properties.load(fis); // fis'in okudugu bilgileri properties'e yukledi
 
 
-
         } catch (IOException e) {
             e.printStackTrace();
         }
