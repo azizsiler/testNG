@@ -27,9 +27,9 @@ public class C03_Priority extends TestBase {
     }
 
 
-    @Test
-    public void techproedTesti() {
-        driver.get("https://www.techproeducation.com");
-        System.out.println(driver.getCurrentUrl());
-    }
+  //  @Test
+   // public void techproedTesti(groups = grup1) {
+      //  driver.get("https://www.techproeducation.com");
+       // System.out.println(driver.getCurrentUrl());
+   // }
 }

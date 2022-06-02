@@ -46,8 +46,8 @@ public class C04_DependsOnMethods  {
         WebElement sonucYaziElementi= driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
         Assert.assertTrue(sonucYaziElementi.getText().contains("Nutella"));
     }
-    @Test
-    public void test04(){
-        System.out.println("bak bu calisti");
-    }
+  //  @Test
+   // public void test04("grup1","grup2"){
+    //    System.out.println("bak bu calisti");
+   // }
 }

@@ -1,0 +1,33 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="isenen methodlar" verbose="">
+
+    <!-- bir classta tum methodlar calisacaksa o classi secmek yeterlidir
+    method secmemizin tememl amaci class iserisinde sadece e=belirlenen methodlarin calismasi
+    ya da belirlenen metholdlar disindaki tum methodlarin calsimasi
+    eger calisacak spesifik methodlari belirlemek istersek inclusive
+    eger calismayacak spesifik methodlari belirlemek istersek exclusive key wordunu kullaniriz
+
+    EGer methodlar dependson methods ile brrbirine baglanmissa xml dosyasi calisirken celiski
+    olusmamasi lazim celiski durummunda selenium testleri calistirmaz
+    -->
+
+    <test name="method">
+        <classes>
+            <class name="tests.day16_notations.C03_Priority">
+                <methods>
+                    <include name="test02"></include>
+                </methods>
+            </class>
+            <class name="tests.day16_notations.C04_DependsOnMethods">
+                <methods>
+                    <exclude name="test03"></exclude>
+                </methods>
+            </class>
+
+
+        </classes>
+    </test>
+
+
+
+</suite>
