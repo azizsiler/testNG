@@ -7,6 +7,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 public class PozitifLoginTest {
+
     BrcPage brcPage=new BrcPage();
 
     @Test
@@ -14,7 +15,7 @@ public class PozitifLoginTest {
         // Bir test method olustur positiveLoginTest()
         //		 https://www.bluerentalcars.com/ adresine git
         Driver.getDriver().get(ConfigReader.getProperty("brcUrl"));
-        //		login butonuna bas
+        //	login butonuna bas
         brcPage.ilkLoginButonu.click();
         // test data user email: customer@bluerentalcars.com ,
         brcPage.emailTextBox.sendKeys(ConfigReader.getProperty("brcValidEmail"));

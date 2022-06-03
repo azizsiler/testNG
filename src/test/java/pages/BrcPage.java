@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class BrcPage {
+
     public BrcPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
