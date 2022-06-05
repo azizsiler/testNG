@@ -35,10 +35,20 @@ public class HpPage {
     @FindBy(xpath = "//input[@name='UserName']")
     public WebElement HpMAnagerUsername;
 
-    @FindBy(xpath = "//input[@class='form-control form-filter input-sm']")
-    public WebElement HpEmailManagerUsername;
+    @FindBy(xpath = "//span[@class='hidden-480']")
+    public WebElement addHotelButonu;
 
+    @FindBy(xpath = "//input[@id='UserName']")
+    public WebElement usernameKutus;
 
+    @FindBy(xpath = "//input[@class='form-control input-lg required tooltips']")
+    public WebElement userPassword;
+
+    @FindBy(xpath = "//input[@id='Email']")
+    public WebElement userEmail;
+
+    @FindBy(xpath = "//input[@id='NameSurname']")
+    public WebElement userFullname;
 
 
     //buradan itibaren 2.Test calisir

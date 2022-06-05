@@ -1,6 +1,7 @@
 package tests.day19_smokeTest;
 
 import com.github.javafaker.Faker;
+import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -22,7 +23,7 @@ public class HpTest {
     @Test
     public void test01() {
 
-        Actions actions=new Actions(Driver.getDriver());
+         Actions actions=new Actions(Driver.getDriver());
         //1. Tests packagenin altına class olusturun: CreateHotel
         // 2.Bir metod olusturun: createHotel
         // 3.https://www.hotelmycamp.com adresine git
@@ -44,14 +45,22 @@ public class HpTest {
        actions.moveToElement(Driver.getDriver().findElement(By.xpath("//a[@href='/admin/HotelAdmin']")));
 
         //  7. Açılan sayfadaki tüm metin kutularına istediğiniz verileri girin.
-        //actions.moveToElement(Driver.getDriver().findElement(By.xpath("//input[@name='IDUser']"))).click();
+       hpPage.addHotelButonu.click();
+      actions.moveToElement(Driver.getDriver().findElement(By.xpath("//input[@id='UserName']"))).click();
+      hpPage.usernameKutus.sendKeys(ConfigReader.getProperty("usernameKutus"));
+      actions.moveToElement(Driver.getDriver().findElement(By.xpath("//input[@class='form-control input-lg required tooltips']"))).click();
+      hpPage.userPassword.sendKeys(ConfigReader.getProperty("userPassword"));
+      WebElement element=Driver.getDriver().findElement(By.xpath("//input[@minlength='8']"));
+      actions.moveToElement(element).click();
+      hpPage.userPassword.sendKeys(ConfigReader.getProperty("userEmail"));
+      actions.moveToElement(Driver.getDriver().findElement(By.xpath("//input[@id='NameSurname']"))).click();
+      hpPage.userFullname.sendKeys(ConfigReader.getProperty("userFullname"));
 
-        hpPage.HpMAnagerUsername.sendKeys(ConfigReader.getProperty("HpMAnagerUsername"));
-        actions.sendKeys(Keys.TAB);
-        actions.moveToElement(Driver.getDriver().
-                findElement(By.xpath("//input[@class='form-control form-filter input-sm']")));
 
-        hpPage.HpEmailManagerUsername.sendKeys(ConfigReader.getProperty("HpEmailManagerUsername"));
+
+
+
+
 
 
     // 8. Save butonuna tıklayın.
