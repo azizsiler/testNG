@@ -27,7 +27,7 @@ public class C05_Assertions extends TestBase {
         WebElement sonucYaziElementi= driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
         Assert.assertTrue(sonucYaziElementi.isDisplayed());
         // 6- arama sonucunun Nutella icerdigini test edin
-        Assert.assertTrue(sonucYaziElementi.getText().contains("Kutella"));
+        Assert.assertTrue(sonucYaziElementi.getText().contains("Nutella"));
 
     }
 }
